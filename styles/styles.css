@@ -166,6 +166,14 @@ body {
         justify-content: center;
     }
 }
+@media (max-width: 515px) {
+    .intro_text::after, .intro_text::before {
+        display: none;
+    }
+    .intro {
+        padding: 0 0 124px;
+    }
+}
 
 /* cards------------------------------ */
 
@@ -193,6 +201,18 @@ body {
 
 .card_text {
     color: #656363;
+}
+
+@media (max-width: 768px) {
+    .card_container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: -30px;
+    }
+    .card_item {
+        width: 100%;
+        margin: 0 0 14px;
+    }
 }
 
 /* history */
@@ -234,7 +254,36 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.history_image {
+@media (max-width: 768px) {
+    .history_container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .history_text {
+        margin-bottom: 60px;
+    }
+    .history_stat {
+        margin-bottom: 45px;
+    }
+}
+@media (max-width: 620px) {
+    .history_image {
+        width: 100%;
+        height: auto;
+        max-width: 290px;
+    }
+}
+@media (max-width: 425px) {
+    .history_text {
+        margin-bottom: 60px;
+    }
+    .history_stat {
+        flex-direction: column;
+        margin-bottom: 45px;
+    }
+    .info_item {
+        margin-bottom: 22px;
+    }
 }
 
 /* ORDER ----------------------- */
@@ -261,6 +310,17 @@ body {
     font-size: 24px;
 }
 
+@media (max-width: 620px) {
+    .order_container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .order_subtext {
+        margin-bottom: 40px;
+    }
+}
+
 
 /* dishes */
 
@@ -270,10 +330,10 @@ body {
 
 .dishes_container {
     display: flex;
+    justify-content: space-between;
 }
 
 .dishes_image {
-
     margin-right: 30px;
 }
 
@@ -284,21 +344,32 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
-.dishes_item-prev {
-    display: flex;
-    align-items: center;
-}
+
 .dishes_item {
     font-size: 26px;
     display: flex;
     align-items: center;
+}
+.dishes_item-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.dishes_item-container {
+    display: flex;
+    align-items: center;
+}
+.dishes_item-img {
+    margin-right: 30px;
+}
+.box {
+    display: flex;
     justify-content: space-between;
 }
 
 .dishes_name {
     position: relative;
 }
-
 .dishes_name::before {
     display: block;
     position: absolute;
@@ -310,14 +381,41 @@ body {
     left: 110%;
     bottom: 40%;
 }
+.dishes_item-info {
+    display: flex;
+}
 
 .item-prev-img {
     margin-right: 30px;
+}
+@media (max-width: 425px) {
+    .dishes_image {
+        max-width: 320px;
+        margin-right: 0;
+    }
+    .dishes_item-info {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 768px) {
     .dishes_container {
         flex-direction: column;
+    }
+}
+@media (max-width: 890px) {
+    .dishes_container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .dishes_image {
+        margin-bottom: 50px;
+    }
+    .dishes_list {
+        align-items: center;
+    }
+    .dishes_name::before {
+        display: none;
     }
 }
 
@@ -394,6 +492,18 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+@media (max-width: 900px) {
+    .slider_body {
+        max-width: 290px;
+        margin: 0 auto;
+    }
+    .slider_line {
+        overflow: auto;
+    }
+}
+
+
+
 /* FEEADBACK ---------------------------- */
 
 .feedback {
@@ -452,6 +562,20 @@ body {
         margin-bottom: 5%;
     }
 }
+@media (max-width: 620px) {
+    .gallery_box {
+        flex-direction: column;
+    }
+    .gallery_box {
+        width: 100%;
+        max-width: 290px;
+        min-height: 274px;
+        height: auto;
+    }
+    .gallery_box img {
+        object-fit: contain;
+    }
+}
 
 
 
@@ -465,6 +589,20 @@ body {
 .cook_body {
     display: flex;
     justify-content: space-between;
+}
+
+.cook_img {
+    height: auto;
+    width: 100%;
+    max-width: 350px;
+}
+
+@media (max-width: 1100px) {
+    .cook_body {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 /* FOOTER */
