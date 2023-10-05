@@ -1,4 +1,4 @@
-# the-best-restaurant-site
+# restaurant-site
 
 Адаптивный сайт на html/css/js
 
